@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ação Social de Doação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .counter {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ação Social de Doação</h1>
+    <p>Ajude-nos a arrecadar alimentos não perecíveis para aqueles que mais precisam!</p>
+
+    <h2>Total Arrecadado:</h2>
+    <div class="counter" id="totalArrecadado">R$ 0,00</div>
+
+    <h2>Como Contribuir:</h2>
+    <a href="tel:21966094116" class="button">Contato: 21 96609-4116</a>
+    <a href="https://link-para-pix" class="button">Doar via PIX (Chave: 21 96609-4116)</a>
+    
+    <h2>Localização de Pontos de Entrega:</h2>
+    <p>Endereço de doação: Shopping Nova América, 3000</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=Shopping+Nova+Am%C3%A9rica,+3000" class="button">Ver Pontos de Entrega</a>
+</div>
+
+<script>
+    // Simulando um contador de arrecadação
+    let total = 0; // Valor inicial
+    const contadorElement = document.getElementById('totalArrecadado');
+
+    function atualizarTotal(novoValor) {
+        total += novoValor;
+        contadorElement.innerText = `R$ ${total.toFixed(2)}`;
+    }
+
+    // Para simulação, vamos aumentar o total a cada 5 segundos
+    setInterval(() => {
+        const valor = Math.random() * 100; // Valor aleatório de doação
+        atualizarTotal(valor);
+    }, 5000); // Atualiza a cada 5 segundos
+</script>
+
+</body>
+</html>
